@@ -142,6 +142,9 @@ pip install pyserial pynput
 
 And then you can run the script! It should already be working if the keybinds match the game you're playing. If not, either change the keybinds in the script or in the game.
 
+!!! info
+      The section below is for the piezo sensors, and will require you to connect the cables/components without a bread board!
+
 ## Upgrades 
 
 Want to use an actual drumming motion with this controller? Follow the section below!
