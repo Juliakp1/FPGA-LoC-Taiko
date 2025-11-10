@@ -169,14 +169,8 @@ int raw[4] = {0, 0, 0, 0};
 bool Trig = false;
 int key_index = 0;
 
-
 void setup() {
-
-#ifdef HID
-  Keyboard.begin();
-#endif
   Serial.begin(9600);
-
 }
 
 void loop() {
