@@ -151,9 +151,11 @@ Want to use an actual drumming motion with this controller? Follow the section b
 
 ### Setup
 
-The connection from the board to sponge board is the same, you just need to switch the buttons to piezo sensors or similar vibration detectors. 
+The connection from the board to sponge board is the same, you just need to switch the buttons to piezo sensors or similar vibration detectors.
 
 For best performance, the sensors must be piezo sensors (a.k.a. piezo speakers, contact microphones). No guarantee if other types of sensors will simply work, but if analog signals with voltage ranged 0-5V are fed into analog pins, this setup should be good to go.
+
+If the hits are triggering at random and/or too much, putting a resistor that connects the Ax (A0 through A3) cable and the ground cable for each input should fix that issue.
 
 ### Code
 
