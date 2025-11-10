@@ -13,6 +13,7 @@ Install the latest version of Arduino IDE from the official website: https://www
 To set up the circuit, you need an Arduino UNO, a spongeboard, a set of four buttons/switches, and 13 male-male connection wires.
 
 ### Connect the Circuit
+
 Connect the wires and sensors according to the diagram below:
 
 
