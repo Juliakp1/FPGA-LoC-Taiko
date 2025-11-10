@@ -95,7 +95,8 @@ Next, create a python file and paste the following code inside it:
 ``` py
 import serial
 import time
-from pynput.keyboard import Controller
+import pyautogui
+import keyboard
 
 # Change to your Arduino's COM port
 PORT = "COM6"
@@ -110,8 +111,6 @@ KEY_MAP = {
 }
 
 ser = serial.Serial(PORT, BAUD_RATE, timeout=1)
-keyboard = Controller()
-
 time.sleep(2)  # wait for Arduino to reset
 
 print("Listening for button presses...")
@@ -122,30 +121,30 @@ while True:
         if line in KEY_MAP:
             key = KEY_MAP[line]
             print(f"Button {line} → Key '{key}'")
-            keyboard.press(key)
-            keyboard.release(key)  # quick tap
+            pyautogui.keyDown(key) 
+            pyautogui.keyUp(key)
     except KeyboardInterrupt:
         print("Exiting...")
         break
     except Exception as e:
         print("Error:", e)
         continue
-``` 
+```
 
 You will probably need to alter the PORT variable to the port you selected when correcting the UNO to your PC.
 
 Install the dependencies:
 
 ``` sh
-pip install pyserial pynput
+pip install pyserial pyautogui keyboard
 ```
 
 And then you can run the script! It should already be working if the keybinds match the game you're playing. If not, either change the keybinds in the script or in the game.
 
-!!! info
-      The section below is for the piezo sensors, and will require you to connect the cables/components without a bread board!
+## Upgrades
 
-## Upgrades 
+!!! info
+      The section below is for the piezo sensors, and will require you to connect the cables/components with soldering (as in, without a bread board)!
 
 Want to use an actual drumming motion with this controller? Follow the section below!
 
@@ -213,6 +212,10 @@ void loop() {
   }
 }
 ``` 
+
+## Showcase
+
+<iframe width="630" height="450" src="taikoFeature.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Credits
 
