@@ -14,7 +14,7 @@
 
   Both of them felt way too expensive for the experience they delivered, and i wanted to try making one for myself since. This project is an attempt to make such a controller, but with the flexibility of allowing you to choose the size and material of your drum, and the flexibility to use buttons if you dont want/have piezo sensors. This drum is made for PC, and will not work of the physical console releases (though they probably work on PC emulators of said consoles).
 
-  For refence, [this is what the arcade drums look like in action](https://youtu.be/b6ujTE_GbB4) (center drum hits are red notes, rim hits are the blue notes).
+  For refence, [this is what the arcade drums look like in action](https://www.youtube.com/watch?v=TpU-Nzul7Wk), though its not the same version as the brazilian one (center drum hits are red notes, rim hits are the blue notes).
 
 ## Software Setup - Arduino IDE
 
